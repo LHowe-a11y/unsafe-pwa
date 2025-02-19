@@ -21,9 +21,11 @@
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         "[python]": {
+          "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit"
+          },
           "editor.defaultFormatter": "charliermarsh.ruff"
         },
-        "editor.fontSize": 18,
         "terminal.integrated.defaultProfile.windows": "Git Bash",
         "window.restoreWindows": "preserve",
         "workbench.editorAssociations": {
