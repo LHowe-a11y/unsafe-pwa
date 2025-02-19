@@ -20,9 +20,8 @@
         "files.autoSave": "onFocusChange",
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "[python]": {
-          "editor.defaultFormatter": "ms-python.black-formatter"
+          "editor.defaultFormatter": "charliermarsh.ruff"
         },
         "editor.fontSize": 18,
         "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -52,5 +51,8 @@
       ]
     }
   },
-  "forwardPorts": [5000, 3000]
+  "forwardPorts": [
+    5000,
+    3000
+  ]
 }

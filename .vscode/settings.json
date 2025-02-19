@@ -1,14 +1,17 @@
-{				
+{
 	"files.autoSave": "onFocusChange",
 	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"[python]": {
-    		"editor.defaultFormatter": "ms-python.black-formatter"
+		"editor.codeActionsOnSave": {
+			"source.fixAll.ruff": "explicit"
+		},
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.formatOnSave": true
 	},
 	"terminal.integrated.defaultProfile.windows": "Git Bash",
 	"window.restoreWindows": "preserve",
 	"workbench.editorAssociations": {
-        	"*.md": "vscode.markdown.preview.editor"
-    	}
+		"*.md": "vscode.markdown.preview.editor"
+	}
 }
