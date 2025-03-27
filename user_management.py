@@ -54,7 +54,7 @@ def retrieveUsers(bad_username, bad_password):
 def insertFeedback(feedback):
     con = sql.connect("database_files/database.db")
     cur = con.cursor()
-    cur.execute(f"INSERT INTO feedback (feedback) VALUES ('{feedback}')")
+    cur.execute("INSERT INTO feedback (feedback) VALUES ('I AM WORKING')")
     con.commit()
     con.close()
 
