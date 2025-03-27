@@ -39,7 +39,6 @@ def signup():
     else:
         return render_template("/signup.html")
 
-
 @app.route("/index.html", methods=["POST", "GET", "PUT", "PATCH", "DELETE"])
 @app.route("/", methods=["POST", "GET"])
 def home():

@@ -1,9 +1,18 @@
 import sqlite3 as sql
 import time
 import random
+# Import necessary library
+import html
 
+# Create function to sanitise (for modularity)
+def sanitise_input(input):
+    return html.escape(input, True)
 
-def insertUser(username, password, DoB):
+def insertUser(bad_username, bad_password, bad_DoB):
+    # Replace parameters with sanitised inputs
+    username = sanitise_input(bad_username)
+    password = sanitise_input(bad_password)
+    DoB = sanitise_input(bad_DoB)
     con = sql.connect("database_files/database.db")
     cur = con.cursor()
     cur.execute(
@@ -14,7 +23,10 @@ def insertUser(username, password, DoB):
     con.close()
 
 
-def retrieveUsers(username, password):
+def retrieveUsers(bad_username, bad_password):
+    # Replace parameters with sanitised inputs
+    username = sanitise_input(bad_username)
+    password = sanitise_input(bad_password)
     con = sql.connect("database_files/database.db")
     cur = con.cursor()
     cur.execute(f"SELECT * FROM users WHERE username = '{username}'")
